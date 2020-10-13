@@ -31,12 +31,12 @@ function number (){
 button.addEventListener ('click', number)
 
 // Definimos evento 2
+
 const atempsNumber = document.querySelector (".js-paragraph1")
 
 function attemps (){
-    const initial = 0;
-    const final = initial + 1;
-
+const initial = 0;
+const final = initial + 1;
 atempsNumber.innerHTML = `Numero de intentos: ${final}`
 }
 
