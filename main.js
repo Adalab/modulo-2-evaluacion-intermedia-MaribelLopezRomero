@@ -13,18 +13,31 @@ console.log(random);
 
 const button = document.querySelector (".js-button" );
 const input = document.querySelector ('.js-input');
-const pista = document.querySelector ('.js-paragraph')
+const track = document.querySelector ('.js-paragraph')
 
 function number (){
     const inputValue = parseInt(input.value);
-    if (inputValue > 100 || inputValue < 1) { pista.innerHTML = "El numero debe estar entre 1 y 100"}
+    console.log (inputValue);
+    if (inputValue > 100 || inputValue < 1) { track.innerHTML = "Pista: El numero debe estar entre 1 y 100"}
     else if (inputValue > random) {
-       pista.innerHTML = "Demasiado alto"
+       track.innerHTML = "Pista: Demasiado alto"
     } else if (inputValue < random) {
-        pista.innerHTML = "Demasiado bajo"
+        track.innerHTML = "Pista: Demasiado bajo"
     } else if (inputValue === random){
-        pista.innerHTML = "Has ganado campeona"
+        track.innerHTML = "PIsta: Has ganado campeona"
     }
 }
 
 button.addEventListener ('click', number)
+
+// Definimos evento 2
+const atempsNumber = document.querySelector (".js-paragraph1")
+
+function attemps (){
+    const initial = 0;
+    const final = initial + 1;
+
+atempsNumber.innerHTML = `Numero de intentos: ${final}`
+}
+
+button.addEventListener ('click', attemps) 
